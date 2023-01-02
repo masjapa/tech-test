@@ -1,0 +1,242 @@
+$primary-color: rgb(38, 151, 180);
+$secondary-color: rgb(9, 99, 89);
+$default: rgb(243, 243, 243);
+$outline: rgb(219, 219, 219);
+$success: #198754;
+$secondary-success: #83dc97;
+$error: #dc3545;
+$secondary-error: #e78e8e;
+$warning: #ffc107;
+$secondary-warning: #f6f29e;
+
+body {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    width: 75px;
+    margin: 10px;
+    font-size: 14px;
+}
+
+.btn--success {
+    background-color: $success;
+    color: white;
+}
+.btn--error {
+    background-color: $error;
+    color: white;
+}
+.btn--warning {
+    background-color: $warning;
+    color: black;
+}
+.btn--info {
+    background-color: $primary-color;
+    color: white;
+}
+
+header {
+    background-color: transparent;
+    h1 {
+        color: $primary-color;
+    }
+    h2 {
+        color: $secondary-color;
+    }
+
+    p {
+        color: $secondary-color;
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    label {
+        font-size: 14px;
+        text-align: start;
+    }
+    .form {
+        margin: 10px 0;
+        position: relative;
+        input {
+            margin: 0px;
+            width: 100%;
+            outline: none;
+            height: 40px;
+            border-radius: 5px;
+            padding-right: 60px;
+            border: 1px solid $outline;
+            background-color: transparent;
+        }
+        input:focus {
+            border: 2px solid $primary-color;
+        }
+        .append {
+            position: absolute;
+            border-radius: 0 4px 4px 0;
+            right: 3px;
+            top: 1px;
+            z-index: 0;
+            border: none;
+            height: 38px;
+            width: 50px;
+            cursor: pointer;
+            color: white;
+            background-color: $primary-color;
+            transform: translateX(2px);
+        }
+        .prepend {
+            position: absolute;
+            border-radius: 4px 0 0 4px;
+            left: 0;
+            top: 2px;
+            z-index: 0;
+            border: none;
+            height: 36px;
+            width: 50px;
+            cursor: pointer;
+            color: $primary-color;
+            outline: none;
+            background-color: $default;
+            transform: translateX(2px);
+        }
+        #prepend-btn {
+            padding-left: 60px;
+        }
+    }
+}
+
+.multiselect {
+    cursor: pointer;
+}
+
+.selectBox {
+    position: relative;
+    select {
+        border: 1px solid $outline;
+        border-radius: 5px;
+        width: 100%;
+        height: 40px;
+        margin-top: 10px;
+    }
+    .overSelect {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+#checkboxes {
+    display: none;
+    border: 1px $outline solid;
+    border-radius: 5px;
+    position: absolute;
+    background: white;
+    width: 500px;
+    .option {
+        display: flex;
+        margin: 5px 0;
+        input {
+            cursor: pointer;
+        }
+    }
+    .option:hover {
+        cursor: pointer;
+        background: $primary-color;
+    }
+}
+#checkboxes label {
+    display: block;
+}
+#checkboxes label:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup--warning {
+    background: $secondary-warning;
+    border: 2px solid $warning;
+}
+.popup--info {
+    background: white;
+    border: 2px solid $secondary-color;
+}
+.popup--success {
+    background: $secondary-success;
+    border: 2px solid $success;
+}
+.popup--error {
+    background: $secondary-error;
+    border: 2px solid $error;
+}
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+.box{
+    width: 70%;
+}
+.popup{
+    width: 70%;
+}
+}
