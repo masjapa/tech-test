@@ -4,11 +4,20 @@ body {
   justify-content: center;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#icon {
+  padding: 10px;
 }
 
 .btn {
-  border: none;
   cursor: pointer;
+}
+
+.btn--size {
   padding: 10px;
   border-radius: 5px;
   width: 75px;
@@ -91,7 +100,6 @@ header p {
   border: none;
   height: 38px;
   width: 50px;
-  cursor: pointer;
   color: white;
   background-color: rgb(38, 151, 180);
   transform: translateX(2px);
@@ -105,13 +113,12 @@ header p {
   border: none;
   height: 36px;
   width: 50px;
-  cursor: pointer;
   color: rgb(38, 151, 180);
   outline: none;
   background-color: rgb(243, 243, 243);
   transform: translateX(2px);
 }
-.form-wrapper .form #prepend-btn {
+.form-wrapper .form #prepend-input {
   padding-left: 60px;
 }
 
@@ -149,12 +156,13 @@ header p {
   display: flex;
   margin: 5px 0;
 }
-#checkboxes .option input {
+#checkboxes .option input[type=checkbox]:checked {
+  background-color: rgb(38, 151, 180);
   cursor: pointer;
 }
 #checkboxes .option:hover {
   cursor: pointer;
-  background: rgb(38, 151, 180);
+  background: rgb(243, 243, 243);
 }
 
 #checkboxes label {

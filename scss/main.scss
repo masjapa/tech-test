@@ -15,11 +15,22 @@ body {
     justify-content: center;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
+#icon {
+    padding: 10px;
+}
+
+
+
 .btn {
-    border: none;
     cursor: pointer;
+}
+
+.btn--size {
     padding: 10px;
     border-radius: 5px;
     width: 75px;
@@ -98,7 +109,6 @@ header {
             border: none;
             height: 38px;
             width: 50px;
-            cursor: pointer;
             color: white;
             background-color: $primary-color;
             transform: translateX(2px);
@@ -112,13 +122,12 @@ header {
             border: none;
             height: 36px;
             width: 50px;
-            cursor: pointer;
             color: $primary-color;
             outline: none;
             background-color: $default;
             transform: translateX(2px);
         }
-        #prepend-btn {
+        #prepend-input {
             padding-left: 60px;
         }
     }
@@ -156,13 +165,14 @@ header {
     .option {
         display: flex;
         margin: 5px 0;
-        input {
+        input[type=checkbox]:checked {
+            background-color: $primary-color;
             cursor: pointer;
         }
     }
     .option:hover {
         cursor: pointer;
-        background: $primary-color;
+        background: $default;
     }
 }
 #checkboxes label {

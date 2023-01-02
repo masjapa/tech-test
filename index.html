@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Test</title>
 </head>
 <body>
@@ -20,15 +21,31 @@
       <label for="append-btn">Appended Button</label>
       <div class="form">
         <input placeholder="Search Item" type="text" id="append-btn">
-        <button class="append">Cari</button>
+        <button class="append btn">
+          <i id="icon" class="fa fa-search"></i>
+        </button>
       </div>
-      <label for="prepend-btn">Preppended Button</label>
+      <label for="prepend-input">Preppended Button</label>
       <div class="form">
-        <select class="prepend">
+        <select class="prepend btn">
           <option value="rupiah">IDR</option>
           <option value="dollar">USD</option>
         </select>
-        <input type="text" id="prepend-btn">
+        <input type="text" id="prepend-input">
+      </div>
+      <label for="append-addon">Append Addon</label>
+      <div class="form">
+        <div class="append">
+          <i id="icon" class="fa fa-envelope"></i>
+        </div>
+        <input type="text" id="append-addon">
+      </div>
+      <label for="prepend-input">Preppended Addon</label>
+      <div class="form">
+        <div class="prepend">
+          <i id="icon" class="fa fa-envelope"></i>
+        </div>
+        <input type="text" id="prepend-input">
       </div>
       <label for="list">Select</label>
       <div class="multiselect" id="list">
@@ -41,15 +58,15 @@
         <div id="checkboxes">
           <div class="option">
             <label for="satu">
-            <input type="checkbox" id="satu" name="pilih[]" value="1" />Pilihan Pertama</label>
+            <input type="checkbox" id="satu" value="1" />Pilihan Pertama</label>
           </div>
           <div class="option">
             <label for="dua">
-            <input type="checkbox" id="dua" name="pilih[]" value="2" />Pilihan Kedua</label>
+            <input type="checkbox" id="dua" value="2" />Pilihan Kedua</label>
           </div>
           <div class="option">
             <label for="tiga">
-            <input type="checkbox" id="tiga" name="pilih[]" value="3" />Pilihan Ketiga</label>
+            <input type="checkbox" id="tiga" value="3" />Pilihan Ketiga</label>
           </div>
         </div>
       </div>
@@ -60,10 +77,10 @@
       <h1>Modal Dialog</h1>
     </header>
     <div class="wrapper">
-      <a href="#popup1" class="btn btn--success">Success</a>
-      <a href="#popup2" class="btn btn--warning">Warning</a>
-      <a href="#popup3" class="btn btn--error">Error</a>
-      <a href="#popup4" class="btn btn--info">Info</a>
+      <a href="#popup1" class="btn btn--size btn--success">Success</a>
+      <a href="#popup2" class="btn btn--size btn--warning">Warning</a>
+      <a href="#popup3" class="btn btn--size btn--error">Error</a>
+      <a href="#popup4" class="btn btn--size btn--info">Info</a>
     </div>
     <div class="wrapper">
       <div id="popup1" class="overlay">
